@@ -71,7 +71,8 @@ fun LandingScreen(
 @Composable
 fun RegistrationScreen(
     onNavigateToLogin: () -> Unit = {},
-    onNavigateToCreateAccount: () -> Unit = {}
+    onNavigateToCreateAccount: () -> Unit = {},
+    onNavigateToMyReadingNook: () -> Unit = {}
 ) {
     var username by rememberSaveable { mutableStateOf("") }
     var email by rememberSaveable { mutableStateOf("") }
@@ -133,6 +134,7 @@ fun RegistrationScreen(
                     if (password == confirmPassword) {
                         errorMessage = null
                         isLoading = true
+                        onNavigateToMyReadingNook()
                     } else {
                         errorMessage = "Passwords do not match"
                     }
