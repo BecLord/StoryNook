@@ -73,7 +73,7 @@ fun MainAppScreen() {
     ) { innerPadding ->
         Box(modifier = Modifier.padding(innerPadding)) {
             when (selectedRoute) {
-                Screen.MyReadingNook.route -> ScreenContent("My Reading Nook")
+                Screen.MyReadingNook.route -> MyReadingNookScreen()
                 Screen.MyReadingPiles.route -> ScreenContent("My Reading Piles")
                 Screen.Wander.route -> ScreenContent("Wander")
                 Screen.ReadingCircles.route -> ScreenContent("Reading Circles")
