@@ -40,7 +40,7 @@ fun MyReadingNookScreen() {
     val friendActivities = listOf(
         FriendActivity("Sarah Jenkins", "finished reading 'Atomic Habits'", "2h ago"),
         FriendActivity("Liam O'Connor", "started reading '1984'", "5h ago"),
-        FriendActivity("Elena Rostova", "reached a 10-day reading streak!", "1d ago")
+        FriendActivity("Elena Lynch", "reached a 10-day reading streak!", "1d ago")
     )
 
     LazyColumn(
@@ -60,7 +60,7 @@ fun MyReadingNookScreen() {
                 )
                 Spacer(modifier = Modifier.height(4.dp))
                 Text(
-                    text = "Welcome back! Here's your reading hub.",
+                    text = "Welcome back!",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
