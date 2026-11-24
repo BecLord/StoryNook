@@ -10,9 +10,9 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserBooksDao {
-    @Query("SELECT * FROM userbooks")
+    @Query("SELECT * FROM UserBooks")
     fun getAllUserBooks(): Flow<List<UserBooks>>
-    @Query("SELECT * FROM userbooks WHERE userBookID = :id")
+    @Query("SELECT * FROM UserBooks WHERE userBookID = :id")
     fun getUserBookById(id: Int): UserBooks?
 
     @Insert

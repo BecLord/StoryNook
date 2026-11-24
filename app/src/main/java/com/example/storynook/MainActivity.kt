@@ -21,13 +21,28 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.example.storynook.ui.theme.StoryNookTheme
+import com.example.storynook.data.BookRepository
+import com.example.storynook.viewModel.BooksViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
 import kotlinx.serialization.Serializable
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        val bookRepository = BookRepository(context = this)
+        val factory = viewModelFactory {
+            initializer {
+                BooksViewModel(bookRepository)
+            }
+        }
         setContent {
+            val booksViewModel: BooksViewModel = viewModel(
+                factory = factory
+            )
+
             StoryNookTheme {
                 var currentScreen by rememberSaveable { mutableStateOf("landing") }
 

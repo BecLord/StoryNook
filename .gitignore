@@ -1,20 +1,44 @@
-# Build & Cache
+# Built application files
+*.apk
+*.apks
+*.aab
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+.gradle/
 /build/
 /app/build/
-.gradle/
-.kotlin/
 
-# Local settings
+# Local configuration file (sdk.path, etc.)
 local.properties
 
-# IDE
+# Generated ID files / IDE
 .idea/workspace.xml
 .idea/tasks.xml
-.idea/shelf/
 .idea/caches/
 .idea/libraries/
+.idea/shelf/
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
 *.iml
 
-# OS
+# Kotlin
+.kotlin/
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+.idea/.history/

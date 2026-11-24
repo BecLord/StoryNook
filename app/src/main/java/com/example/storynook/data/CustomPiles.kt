@@ -8,6 +8,7 @@ import androidx.room.PrimaryKey
 data class CustomPiles(
     val userID: Int,
     val bookID: Int,
+    @PrimaryKey(autoGenerate = true)
     val pileID: Int,
     val pileName: String,
     val description: String,

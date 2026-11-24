@@ -9,9 +9,9 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ReviewsDao {
-    @Query("SELECT * FROM reviews")
+    @Query("SELECT * FROM Reviews")
     fun getAllReviews(): Flow<List<Reviews>>
-    @Query("SELECT * FROM reviews WHERE recommendationID = :id")
+    @Query("SELECT * FROM Reviews WHERE recommendationID = :id")
     fun getReviewById(id: Int): Reviews
 
     @Insert
@@ -20,5 +20,4 @@ interface ReviewsDao {
     suspend fun updateReview(review: Reviews)
     @Delete
     suspend fun deleteReview(review: Reviews)
-}
 }

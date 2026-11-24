@@ -9,9 +9,9 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface RecommendationsDao {
-    @Query("SELECT * FROM recommendations")
+    @Query("SELECT * FROM Recommendations")
     fun getAllRecommendations(): Flow<List<Recommendations>>
-    @Query("SELECT * FROM recommendations WHERE recommendationID = :id")
+    @Query("SELECT * FROM Recommendations WHERE recommendationID = :id")
     fun getRecommendationById(id: Int): Recommendations
 
     @Insert

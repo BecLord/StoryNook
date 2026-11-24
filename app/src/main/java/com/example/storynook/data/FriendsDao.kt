@@ -9,10 +9,10 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface FriendsDao {
-    @Query("SELECT * FROM friends")
+    @Query("SELECT * FROM Friends")
     fun getAllFriends(): Flow<List<Friends>>
 
-    @Query("SELECT * FROM friends WHERE friendID = :id")
+    @Query("SELECT * FROM Friends WHERE friendID = :id")
     fun getFriendById(id: Int): Friends
 
     @Insert
