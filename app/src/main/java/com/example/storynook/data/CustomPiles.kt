@@ -1,9 +1,11 @@
 package com.example.storynook.data
 
-import kotlinx.serialization.Serializable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Serializable
-data class customPiles(
+@Entity(tableName = "CustomPiles")
+
+data class CustomPiles(
     val userID: Int,
     val bookID: Int,
     val pileID: Int,

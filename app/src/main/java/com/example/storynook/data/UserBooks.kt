@@ -1,9 +1,12 @@
 package com.example.storynook.data
 
-import kotlinx.serialization.Serializable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Serializable
+@Entity(tableName = "UserBooks")
+
 data class UserBooks(
+    @PrimaryKey(autoGenerate = true)
     val userBookID: Int,
     val userID: Int,
     val bookID: Int,
@@ -12,5 +15,6 @@ data class UserBooks(
     val rating: Int,
     val review: String,
     val dateStarted: String,
-    val dateFinished: String
+    val dateFinished: String,
+    val countsTowardsChallenge: Boolean
 )

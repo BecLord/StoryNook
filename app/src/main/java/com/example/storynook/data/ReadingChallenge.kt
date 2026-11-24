@@ -1,9 +1,12 @@
 package com.example.storynook.data
 
-import kotlinx.serialization.Serializable
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Serializable
+@Entity(tableName = "ReadingChallenge")
+
 data class ReadingChallenge(
+    @PrimaryKey(autoGenerate = true)
     val challengeID: Int,
     val userID: Int,
     val bookID: Int,

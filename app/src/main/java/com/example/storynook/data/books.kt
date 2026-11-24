@@ -11,5 +11,7 @@ data class Books(
     val genre: String,
     val coverImage: Image,
     val description: String,
-    val pageCount: Int
+    val pageCount: Int,
+    val publicationDate: String,
+    val ratingcount: Int
 )
